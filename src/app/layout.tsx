@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
+import { BackgroundOrbs } from "@/components/BackgroundOrbs";
+import { CustomCursor } from "@/components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,12 +30,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col relative text-white">
-        {/* Background Gradients */}
-        <div className="fixed inset-0 z-[-1] bg-[#030303] overflow-hidden">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px]" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-secondary/20 blur-[120px]" />
-        </div>
+      <body className="min-h-full flex flex-col relative text-foreground bg-[var(--background)]">
+        <BackgroundOrbs />
+        <CustomCursor />
         <Providers>{children}</Providers>
       </body>
     </html>

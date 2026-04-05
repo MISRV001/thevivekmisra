@@ -11,13 +11,13 @@
 }
 
 :root {
-  /* Default to Dark Mode as it feels more premium */
-  --background: #030303;
-  --foreground: #f0f0f0;
+  /* Deep Cosmos Theme */
+  --background: #0B0B1A; /* Deep Indigo / Midnight */
+  --foreground: #E0E7FF;
 
-  --primary: #8b5cf6; /* Violet */
-  --secondary: #0ea5e9; /* Sky Blue */
-  --accent: #f43f5e; /* Rose */
+  --primary: #00F0FF; /* Neon Cyan */
+  --secondary: #8A2BE2; /* Electric Purple */
+  --accent: #FF007F; /* Neon Pink */
 }
 
 body {
